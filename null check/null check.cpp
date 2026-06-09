@@ -11,7 +11,7 @@ class Weapon {
 class Player {
 	std::shared_ptr<Weapon>weapon;
 public:
-	Player(std::shared_ptr<Weapon>weapon1) :weapon(std::move(weapon1)) {
+	Player(std::shared_ptr<Weapon>weapon1) :weapon(weapon1) {
 		std::cout << weapon.use_count() << std::endl;
 		std::cout << weapon1.use_count() << std::endl;
 	}
