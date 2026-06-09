@@ -12,15 +12,16 @@ public:
 
 
 };
+
+void Func(Test* test)
+{
+	assert(test != nullptr);
+	test->Show();
+}
+
+
 int main()
 {
-	auto p = new Test();
-
-	assert(p != nullptr);
-
-		p->Show();
-		
-	
-	delete p;
-
+	Func(new Test());
+	Func(nullptr);
 }
