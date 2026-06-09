@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include<assert.h>
 
 
 class Test
@@ -15,11 +16,11 @@ int main()
 {
 	auto p = new Test();
 
-	if (p != nullptr) {
+	assert(p != nullptr);
 
 		p->Show();
 		
-	}
+	
 	delete p;
 
 }
